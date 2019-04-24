@@ -23,3 +23,20 @@ As an organised person
 So that I can quickly visit useful pages
 I'd like to see a list of bookmarked pages
 ```
+
+## Database setup
+
+```
+$ brew install postgresql # install postegresql
+$ psql postgres # connect to postgres database
+postgres=# CREATE DATABASE bookmark_manager # create a new bookmark_manager database
+```
+
+As an alternative `\c` is shorthand for CREATE DATABASE
+
+### Connect to the bookmark_manager database
+
+Once you create the database you should be automatically connected and see the below prompt - if not you will need to connect to it. You will to run a SQL script:
+```
+bookmark_manager=# \i 01_create_bookmarks_table.sql
+```
