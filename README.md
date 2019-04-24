@@ -30,9 +30,8 @@ I'd like to see a list of bookmarked pages
 $ brew install postgresql # install postegresql
 $ psql postgres # connect to postgres database
 postgres=# CREATE DATABASE bookmark_manager # create a new bookmark_manager database
+postgres=# \c bookmark_manager      #connect to the database
 ```
-
-As an alternative `\c` is shorthand for CREATE DATABASE
 
 ### Connect to the bookmark_manager database
 
