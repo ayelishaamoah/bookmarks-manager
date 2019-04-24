@@ -38,5 +38,5 @@ As an alternative `\c` is shorthand for CREATE DATABASE
 
 Once you create the database you should be automatically connected and see the below prompt - if not you will need to connect to it. You will to run a SQL script:
 ```
-bookmark_manager=# \i 01_create_bookmarks_table.sql
+bookmark_manager=# \i 01_create_bookmarks_table.sql # This should include the full file path
 ```
