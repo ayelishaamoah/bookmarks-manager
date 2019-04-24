@@ -1,11 +1,17 @@
+require 'pg'
+
 class Bookmarks
 
   def self.all
-     [
-       "www.google.com",
-       "www.netflix.com",
-       "www.amazon.co.uk"
-     ]
-  end
+
+    connection = PG.connect :dbname => 'bookmark_manager'
+
+    result = connection.exec "SELECT * FROM bookmarks"
+
+    result.map do |row|
+      row['url']
+     end
+     
+   end
 
 end

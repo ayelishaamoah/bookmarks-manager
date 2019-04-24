@@ -7,8 +7,8 @@ feature 'Viewing bookmarks' do
   scenario 'clicks view bookmarks button' do
     visit('/')
     click_button('View Bookmarks')
-    expect(page).to have_content "www.google.com"
-    expect(page).to have_content "www.netflix.com"
-    expect(page).to have_content "www.amazon.co.uk"
+    expect(page).to have_content "http://www.makersacademy.com"
+    expect(page).to have_content "http://www.google.com"
+    expect(page).to have_content "http://www.destroyallsoftware.com"
   end
 end
