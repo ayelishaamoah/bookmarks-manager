@@ -22,6 +22,10 @@ Tooling
 As an organised person
 So that I can quickly visit useful pages
 I'd like to see a list of bookmarked pages
+
+As an organised person
+So that I can keep track of useful websites
+I'd like to be able to add a new bookmark
 ```
 
 ## Database setup

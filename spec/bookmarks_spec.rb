@@ -16,4 +16,11 @@ describe Bookmarks do
     end
   end
 
+  describe '#add_bookmark' do
+    it 'should add a new bookmark to the database' do
+      Bookmarks.add_bookmark('http://www.bbc.co.uk')
+      expect(Bookmarks.all).to include 'http://www.bbc.co.uk'
+    end
+  end
+
 end
