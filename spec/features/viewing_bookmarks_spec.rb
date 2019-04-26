@@ -21,7 +21,7 @@ feature 'Adding bookmarks' do
   scenario 'add one bookmark' do
     visit ('/')
     click_button('Add Bookmark')
-    fill_in('bookmark', with: 'http://www.google.com')
+    fill_in('url', with: 'http://www.google.com')
     click_button('Add Bookmark')
     expect(page).to have_content('http://www.google.com')
   end
