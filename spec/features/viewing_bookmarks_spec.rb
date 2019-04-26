@@ -5,9 +5,9 @@ feature 'Viewing bookmarks' do
   end
 
   scenario 'clicks view bookmarks button' do
-    Bookmarks.add_bookmark('http://www.destroyallsoftware.com')
-    Bookmarks.add_bookmark('http://www.makersacademy.com')
-    Bookmarks.add_bookmark('http://www.twitter.com')
+    Bookmarks.add_bookmark(url: 'http://www.destroyallsoftware.com')
+    Bookmarks.add_bookmark(url: 'http://www.makersacademy.com')
+    Bookmarks.add_bookmark(url: 'http://www.twitter.com') 
 
     visit('/')
     click_button('View Bookmarks')

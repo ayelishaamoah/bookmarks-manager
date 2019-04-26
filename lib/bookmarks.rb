@@ -18,7 +18,7 @@ class Bookmarks
 
    end
 
-   def self.add_bookmark(url)
+   def self.add_bookmark(url:)
      if ENV['ENVIRONMENT'] == 'test'
        connection = PG.connect :dbname => 'bookmark_manager_test'
      else
