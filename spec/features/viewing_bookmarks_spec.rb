@@ -5,12 +5,9 @@ feature 'Viewing bookmarks' do
   end
 
   scenario 'clicks view bookmarks button' do
-
-    connection = PG.connect :dbname => 'bookmark_manager_test'
-
-    connection.exec "INSERT INTO bookmarks (url) VALUES ('http://www.destroyallsoftware.com')"
-    connection.exec "INSERT INTO bookmarks (url) VALUES ('http://www.makersacademy.com')"
-    connection.exec "INSERT INTO bookmarks (url) VALUES ('http://www.twitter.com')"
+    Bookmarks.add_bookmark('http://www.destroyallsoftware.com')
+    Bookmarks.add_bookmark('http://www.makersacademy.com')
+    Bookmarks.add_bookmark('http://www.twitter.com')
 
     visit('/')
     click_button('View Bookmarks')
