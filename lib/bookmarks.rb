@@ -4,7 +4,7 @@ class Bookmarks
 
   def self.all
 
-    if ENV['RACK_ENV'] == 'test'
+    if ENV['ENVIRONMENT'] == 'test'
       connection = PG.connect :dbname => 'bookmark_manager_test'
     else
       connection = PG.connect :dbname => 'bookmark_manager'
@@ -18,14 +18,14 @@ class Bookmarks
 
    end
 
-   def self.add_bookmark(bookmark)
-     if ENV['RACK_ENV'] == 'test'  
+   def self.add_bookmark(url)
+     if ENV['ENVIRONMENT'] == 'test'
        connection = PG.connect :dbname => 'bookmark_manager_test'
      else
        connection = PG.connect :dbname => 'bookmark_manager'
      end
 
-     connection.exec "INSERT INTO bookmarks (url) VALUES ('#{bookmark}')"
+     connection.exec "INSERT INTO bookmarks (url) VALUES ('#{url}')"
 
    end
 
